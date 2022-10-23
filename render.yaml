@@ -1,0 +1,21 @@
+# More details see https://render.com/docs/blueprint-spec
+
+services:
+ - type: web
+   name: wayback
+   plan: free
+   env: docker
+   autoDeploy: false
+   healthCheckPath: /healthcheck
+   envVars:
+     # see https://render.com/docs/free#other-limitations for more details.
+     - key: WAYBACK_TOR_REMOTE_PORTS
+       value: 80,8008
+     - key: GC_MEM
+       value: 500
+     # e.g. --ia --ip --is --ph -d web -d telegram
+     - key: WAYBACK_ARGS
+       sync: false
+     # see https://github.com/wabarc/wayback/blob/main/wayback.conf for more details.
+     - key: WAYBACK_CONFIGURATIONS
+       sync: false
