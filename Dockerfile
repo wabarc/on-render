@@ -1,6 +1,6 @@
 FROM ghcr.io/pufferffish/wireproxy:latest@sha256:fe39af4e14475bdb9933d2017f30b9824c44bda072573e5f6720aaf56e6ee638 AS proxy
 
-FROM ghcr.io/wabarc/wayback
+FROM ghcr.io/wabarc/wayback:edge
 
 LABEL org.wabarc.homepage="http://github.com/wabarc" \
       org.wabarc.repository="http://github.com/wabarc/on-render"
