@@ -8,9 +8,8 @@ services:
    autoDeploy: false
    healthCheckPath: /healthcheck
    envVars:
-     # see https://render.com/docs/free#other-limitations for more details.
-     - key: WAYBACK_TOR_REMOTE_PORTS
-       value: 80,8008
+     - key: PORT
+       value: 80
      - key: GC_MEM
        value: 500
      # e.g. --ia --ip --is --ph -d web -d telegram
