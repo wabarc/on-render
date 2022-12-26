@@ -68,8 +68,7 @@ ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
     CHROMEDP_DISABLE_GPU=true \
     CHROMEDP_NO_SANDBOX=true \
-    CHROMEDP_USER_AGENT="WaybackArchiver/1.0" \
-    GC_MEM=500
+    CHROMEDP_USER_AGENT="WaybackArchiver/1.0"
 
 ENV WAYBACK_STORAGE_DIR="/tmp/reduxer" \
     WAYBACK_ARGS="-d web"

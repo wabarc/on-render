@@ -10,8 +10,6 @@ services:
    envVars:
      - key: PORT
        value: 80
-     - key: GC_MEM
-       value: 500
      # e.g. --ia --ip --is --ph -d web -d telegram
      - key: WAYBACK_ARGS
        sync: false
