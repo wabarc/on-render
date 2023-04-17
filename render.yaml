@@ -8,8 +8,6 @@ services:
    autoDeploy: false
    healthCheckPath: /healthcheck
    envVars:
-     - key: PORT
-       value: 80
      # e.g. --ia --ip --is --ph -d web -d telegram
      - key: WAYBACK_ARGS
        sync: false

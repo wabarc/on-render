@@ -32,7 +32,6 @@ RUN set -o pipefail && \
     supervisor \
     ca-certificates \
     py3-setuptools \
-    socat \
     libcap \
     you-get \
     rtmpdump \
@@ -49,18 +48,13 @@ RUN set -ex; \
     chown wayback:nogroup /var/lib/tor; \
     chmod a+r /etc/supervisord.conf /entrypoint.sh /cleaner.sh; \
     \
-    sed -i 's/User/#User/g' /etc/tor/torrc; \
-    \
-    setcap 'cap_net_bind_service=+ep' /usr/bin/socat
+    sed -i 's/User/#User/g' /etc/tor/torrc
 
 USER wayback
 
-ENV WAYBACK_ONION_LOCAL_PORT=8964
-ENV WAYBACK_ONION_REMOTE_PORTS=80,8008
 ENV SOCAT_OPTIONS="-d"
-ENV PORT=80
 
-EXPOSE 80 443 8008 8964
+EXPOSE 80 8964 9001
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
