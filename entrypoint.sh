@@ -11,8 +11,8 @@ if [ -n "${WAYBACK_CONFIGURATIONS}" ]; then
     WAYBACK_ARGS="$WAYBACK_ARGS -c wayback.conf"
 fi
 
-if [ -n "${WAYBACK_TOR_LOCAL_PORT}" ]; then
-    export PORT=$WAYBACK_TOR_LOCAL_PORT
+if [ -n "${WAYBACK_ONION_LOCAL_PORT}" ]; then
+    export PORT=$WAYBACK_ONION_LOCAL_PORT
 fi
 
 if [ -z "${CHROMEDP_NO_SANDBOX}" ]; then
