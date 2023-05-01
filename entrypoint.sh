@@ -6,8 +6,10 @@
 command -v wayback > /dev/null || { echo "wayback is not installed in this system" 1>&2; exit 1; }
 printenv WAYBACK_ARGS > /dev/null || { echo "environment variable WAYBACK_ARGS is not found in this system" 1>&2; exit 1; }
 
+homedir=/wayback
+
 if [ -n "${WAYBACK_CONFIGURATIONS}" ]; then
-    printenv WAYBACK_CONFIGURATIONS > wayback.conf
+    printenv WAYBACK_CONFIGURATIONS > "${homedir}/wayback.conf"
     WAYBACK_ARGS="$WAYBACK_ARGS -c wayback.conf"
 fi
 
@@ -26,6 +28,10 @@ if [ -z "${CHROMEDP_NO_HEADLESS}" ]; then
 fi
 if [ -z "${CHROMEDP_USER_AGENT}" ]; then
     export CHROMEDP_USER_AGENT="Mozilla/5.0 (en-us) AppleWebKit/525.13 (KHTML, like Gecko) Version/3.1 Safari/525.13"
+fi
+
+if [ -n "${WIREPROXY_CONF}" ]; then
+    printenv WIREPROXY_CONF > "${homedir}/wireproxy.conf"
 fi
 
 # execute wayback command

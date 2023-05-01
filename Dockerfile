@@ -1,7 +1,11 @@
+FROM ghcr.io/pufferffish/wireproxy:latest@sha256:14c538dbbab24b76ba5f9ef9be3d81857b0fa5f2b65a568a5a6946e6e646e8d9 AS proxy
+
 FROM ghcr.io/wabarc/wayback
 
 LABEL org.wabarc.homepage="http://github.com/wabarc" \
       org.wabarc.repository="http://github.com/wabarc/on-render"
+
+COPY --from=proxy /usr/bin/wireproxy /usr/bin/wireproxy
 
 ENV BASE_DIR /wayback
 
@@ -40,6 +44,7 @@ RUN set -o pipefail && \
  && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 COPY cleaner.sh /
+COPY wireproxy.sh /
 COPY entrypoint.sh /
 COPY supervisord.conf /etc/
 
