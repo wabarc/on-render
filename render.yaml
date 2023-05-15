@@ -14,3 +14,5 @@ services:
      # see https://github.com/wabarc/wayback/blob/main/wayback.conf for more details.
      - key: WAYBACK_CONFIGURATIONS
        sync: false
+     - key: PROXY_SERVER
+       value: ''

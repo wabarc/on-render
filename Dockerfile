@@ -44,6 +44,7 @@ RUN set -o pipefail && \
  && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 COPY cleaner.sh /
+COPY browser.sh /
 COPY wireproxy.sh /
 COPY entrypoint.sh /
 COPY supervisord.conf /etc/
