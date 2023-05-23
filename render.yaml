@@ -14,5 +14,9 @@ services:
      # see https://github.com/wabarc/wayback/blob/main/wayback.conf for more details.
      - key: WAYBACK_CONFIGURATIONS
        sync: false
+     - key: PORT
+       value: '8964'
      - key: PROXY_SERVER
+       value: ''
+     - key: WIREPROXY_CONF
        value: ''

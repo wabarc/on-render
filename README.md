@@ -19,7 +19,7 @@ reduce the cost of running the `wayback` service, and providing additional anony
 
 #### WAYBACK_ARGS
 
-wayback command-line arguments.
+wayback command-line arguments, e.g. `-d web -d telegram`.
 
 #### WAYBACK_CONFIGURATIONS
 

@@ -36,6 +36,7 @@ RUN set -o pipefail && \
     supervisor \
     ca-certificates \
     py3-setuptools \
+    curl \
     libcap \
     you-get \
     rtmpdump \
