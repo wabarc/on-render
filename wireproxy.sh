@@ -15,7 +15,7 @@ restart() {
   pkill wireproxy
 
   # Run wireproxy with silent mode in backgound
-  wireproxy --daemon --silent --config $config
+  wireproxy --silent --config $config > /dev/null 2>&1 &
   sleep 3
 }
 
