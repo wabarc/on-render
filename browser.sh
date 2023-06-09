@@ -2,8 +2,11 @@
 #
 # Perform chromium
 
-if [ -n "${DEBUG}" ]; then
+if [ "${DEBUG}" = "yes" ]; then
     set -x
+fi
+if [ "${NO_BROWSER}" = "yes" ]; then
+    exit 0
 fi
 
 # check dependency
