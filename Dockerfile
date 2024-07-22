@@ -1,4 +1,4 @@
-FROM ghcr.io/pufferffish/wireproxy:latest@sha256:fe39af4e14475bdb9933d2017f30b9824c44bda072573e5f6720aaf56e6ee638 AS proxy
+FROM ghcr.io/pufferffish/wireproxy:latest@sha256:8e59c47dd88c4348af6ca2a416cba5ddc74605b0fbf38aafb673f56953cb1569 AS proxy
 
 FROM ghcr.io/wabarc/wayback
 
