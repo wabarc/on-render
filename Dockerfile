@@ -1,4 +1,4 @@
-FROM ghcr.io/whyvl/wireproxy:latest@sha256:fe39af4e14475bdb9933d2017f30b9824c44bda072573e5f6720aaf56e6ee638 AS proxy
+FROM ghcr.io/whyvl/wireproxy:latest@sha256:5fafcdef36dbdc5f42c66bb4ea78022a5d42a7edbd1f2076bf1242af93e7e327 AS proxy
 
 FROM ghcr.io/wabarc/wayback
 
